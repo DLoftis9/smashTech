@@ -3,8 +3,6 @@
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 
   @media #{$medium} {
     width: 750px;
@@ -30,22 +28,6 @@
   clear: both;
 }
 
-.center-element {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.clearfix:after {
-	clear: both;
-}
-
-.clearfix:before,
-.clearfix:after {
-	content: " ";
-	display: table;
-}
-
 .row:before,
 .row:after {
   content: " ";
@@ -64,13 +46,6 @@
 
 .container:after {
 	clear: both;
-}
-
-.col__container {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .row {

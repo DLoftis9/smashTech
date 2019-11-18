@@ -1,6 +1,5 @@
 import React from 'react';
 import Clock from './components/Clock';
-import CurrentTime from './components/CurrentTime'
 
 function App() {
   return (
@@ -8,7 +7,6 @@ function App() {
       <div className="container">
         <div className="row">
           <Clock />
-          <CurrentTime />
         </div>
       </div>
     </div>
