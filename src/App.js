@@ -64,7 +64,9 @@ export default class App extends React.Component {
     };
 
     const minuteHand = 360 * (this.minuteTime(this.state.time) / 60);
-    const hourHand = 360 * (this.hourTime(this.state.time) / 12) + (360 / 12) * (this.minuteTime(this.state.time) / 60);
+    const hourHand =
+      360 * (this.hourTime(this.state.time) / 12) +
+      (360 / 12) * (this.minuteTime(this.state.time) / 60);
 
     return (
       <div className="app">
@@ -78,8 +80,8 @@ export default class App extends React.Component {
               divStyleMinutes={divStyleMinutes}
               divStyleHours={divStyleHours}
             />
-            
-            <DegreeAngle 
+
+            <DegreeAngle
               localTime={this.state.time.toLocaleTimeString()}
               minuteHand={minuteHand}
               hourHand={hourHand}
