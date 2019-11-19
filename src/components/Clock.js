@@ -75,7 +75,6 @@ export default class Clock extends React.Component {
               <div className="indicator-cover"></div>
             </div>
           </div>
-          <div className="digital"> {this.state.date.toLocaleTimeString()}</div>
         </div>     
       );
     }

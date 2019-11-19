@@ -1,5 +1,6 @@
 import React from 'react';
 import Clock from './components/Clock';
+import DegreeAngle from './components/DegreeAngle';
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <div className="container">
         <div className="row">
           <Clock />
+          <DegreeAngle />
         </div>
       </div>
     </div>
