@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ClockSVG = props => (
+const ClockSVG = () => (
   <svg className="background-numbers" viewBox="0 0 226.6 233.8">
     <path
       className="numbers"
