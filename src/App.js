@@ -22,7 +22,7 @@ import DegreeAngle from './components/DegreeAngle';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
       date: new Date(),
     };
@@ -32,7 +32,7 @@ export default class App extends React.Component {
     indicatorSeconds: PropTypes.string,
     indicatorMinutes: PropTypes.string,
     indicatorHours: PropTypes.string,
-  
+
     divStyleSeconds: PropTypes.object,
     divStyleMinutes: PropTypes.object,
     divStyleHours: PropTypes.object,
@@ -75,7 +75,7 @@ export default class App extends React.Component {
       indicatorSeconds,
       indicatorMinutes,
       indicatorHours,
-    
+
       // divStyleSeconds,
       // divStyleMinutes,
       // divStyleHours,
@@ -101,11 +101,10 @@ export default class App extends React.Component {
       <div className="App">
         <div className="container">
           <div className="row">
-            <Clock 
+            <Clock
               indicatorSeconds={this.indicatorSeconds()}
               indicatorMinutes={this.indicatorMinutes()}
               indicatorHours={this.indicatorHours()}
-            
               divStyleSeconds={divStyleSeconds}
               divStyleMinutes={divStyleMinutes}
               divStyleHours={divStyleHours}

@@ -90,7 +90,6 @@ import ClockSVG from './ClockSVG';
 //   }
 // }
 
-
 const propTypes = {
   indicatorSeconds: PropTypes.string,
   indicatorMinutes: PropTypes.string,
@@ -106,31 +105,31 @@ const propTypes = {
 // };
 
 const Clock = props => (
-<React.Fragment>
-        <div className="clock">
-          <div id="clock" className="clock-content">
-            <ClockSVG />
+  <React.Fragment>
+    <div className="clock">
+      <div id="clock" className="clock-content">
+        <ClockSVG />
 
-            <div
-              // id="hours-indicator"
-              className={props.indicatorHours}
-              style={props.divStyleHours}
-            ></div>
-            <div
-              // id="minutes-indicator"
-              className={props.indicatorMinutes}
-              style={props.divStyleMinutes}
-            ></div>
-            <div
-              // id="seconds-indicator"
-              className={props.indicatorSeconds}
-              style={props.divStyleSeconds}
-            ></div>
-            <div className="indicator-cover"></div>
-          </div>
-        </div>
-      </React.Fragment>
-)
+        <div
+          // id="hours-indicator"
+          className={props.indicatorHours}
+          style={props.divStyleHours}
+        ></div>
+        <div
+          // id="minutes-indicator"
+          className={props.indicatorMinutes}
+          style={props.divStyleMinutes}
+        ></div>
+        <div
+          // id="seconds-indicator"
+          className={props.indicatorSeconds}
+          style={props.divStyleSeconds}
+        ></div>
+        <div className="indicator-cover"></div>
+      </div>
+    </div>
+  </React.Fragment>
+);
 
 Clock.propTypes = propTypes;
 // Clock.defaultProps = defaultProps;
