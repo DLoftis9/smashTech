@@ -20,20 +20,18 @@ const defaultProps = {
 };
 
 const Clock = props => (
-  <React.Fragment>
-    <div className={props.componentName}>
-      <div className={props.componentName + `-content`}>
-        <ClockSVG />
-        <div className={props.indicatorHours} style={props.divStyleHours}></div>
+  <div className={props.componentName}>
+    <div className={props.componentName + `-content`}>
+      <ClockSVG />
+      <div className={props.indicatorHours} style={props.divStyleHours}></div>
 
-        <div className={props.indicatorMinutes} style={props.divStyleMinutes}></div>
+      <div className={props.indicatorMinutes} style={props.divStyleMinutes}></div>
 
-        <div className={props.indicatorSeconds} style={props.divStyleSeconds}></div>
+      <div className={props.indicatorSeconds} style={props.divStyleSeconds}></div>
 
-        <div className={props.componentName + `-center`}></div>
-      </div>
+      <div className={props.componentName + `-center`}></div>
     </div>
-  </React.Fragment>
+  </div>
 );
 
 Clock.propTypes = propTypes;
