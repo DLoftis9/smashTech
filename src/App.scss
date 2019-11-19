@@ -1,5 +1,7 @@
 @import './styles/_variables.scss';
 
+@import './styles/normalize.scss';
+@import './styles/general.scss';
+
 @import './styles/clock.scss';
 @import './styles/degree-chart.scss';
-@import './styles/general.scss';

@@ -1,59 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default class DegreeAngle extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {time: new Date()};
-    }
-  
-    componentDidMount() {
-      this.timerID = setInterval(
-        () => this.tick(),
-        1000
-      );
-    }
-  
-    componentWillUnmount() {
-      clearInterval(this.timerID);
-    }
-  
-    hourTime() {
-        return this.state.time.getHours() % 12 || 12;
-    }
+const propTypes = {
+  componentName: PropTypes.string,
 
-    minuteTime() {
-        return this.state.time.getMinutes();
-    }
+  localTime: PropTypes.string,
+  minuteHand: PropTypes.number,
+  hourHand: PropTypes.number,
+};
 
-    tick() {
-      this.setState({
-        time: new Date()
-      });
-    }
-  
-    render() {
-        var minuteHand = 360 * (this.minuteTime(this.state.time)/60);
-        var hourHand = (360 * (this.hourTime(this.state.time)/12)) + ((360/12) * (this.minuteTime(this.state.time)/60));
+const defaultProps = {
+  componentName: 'degree-angle',
+};
 
-        return (
-            <React.Fragment>
-                <h2>{this.state.time.toLocaleTimeString()}</h2>
-                
-                <div>{minuteHand > hourHand ? (
-                    <React.Fragment>
-                        <p className="first-condition">The current angle of the clock hands: {minuteHand - hourHand} degrees</p>
-                        <p>{this.hourTime(this.state.time)}</p>
-                        <p>{this.minuteTime(this.state.time)}</p>
-                    </React.Fragment>
-                ) : (
-                    <React.Fragment>
-                        <p className="second-condition">The current angle of the clock hands: {hourHand - minuteHand} degrees</p>
-                        <p>{this.hourTime(this.state.time)}</p>
-                        <p>{this.minuteTime(this.state.time)}</p>
-                    </React.Fragment>
-                )}</div>
-            </React.Fragment>
-        );
-    }
-  }
+const DegreeAngle = props => (
+  <div className={props.componentName}>
+    <h2 className="local-time">{props.localTime}</h2>
+
+    <React.Fragment>
+      {props.minuteHand > props.hourHand ? (
+        <h3 className="first-condition">
+          The current angle of the clock hands: {props.minuteHand - props.hourHand} degrees
+        </h3>
+      ) : (
+        <h3 className="second-condition">
+          The current angle of the clock hands: {props.hourHand - props.minuteHand} degrees
+        </h3>
+      )}
+    </React.Fragment>
+  </div>
+);
+
+DegreeAngle.propTypes = propTypes;
+DegreeAngle.defaultProps = defaultProps;
+
+export default DegreeAngle;
