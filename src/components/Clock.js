@@ -6,13 +6,13 @@ import ClockSVG from './ClockSVG';
 const propTypes = {
   componentName: PropTypes.string,
 
-  indicatorSeconds: PropTypes.string.isRequired,
-  indicatorMinutes: PropTypes.string.isRequired,
-  indicatorHours: PropTypes.string.isRequired,
+  indicatorSeconds: PropTypes.string,
+  indicatorMinutes: PropTypes.string,
+  indicatorHours: PropTypes.string,
 
-  divStyleSeconds: PropTypes.object.isRequired,
-  divStyleMinutes: PropTypes.object.isRequired,
-  divStyleHours: PropTypes.object.isRequired,
+  divStyleSeconds: PropTypes.object,
+  divStyleMinutes: PropTypes.object,
+  divStyleHours: PropTypes.object,
 };
 
 const defaultProps = {
