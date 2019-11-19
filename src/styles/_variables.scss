@@ -1,10 +1,7 @@
-// font-sizes
-$font-large: 65px;
-$font-header: 40px;
-$font-subheader: 25px;
-
-// border radius
-$border-radius: 5px;
+// break points
+$medium: '(min-width: 768px)';
+$large: '(min-width: 992px)';
+$xlarge: '(min-width: 1200px)';
 
 // colors
 $color-primary: #FA5C65;

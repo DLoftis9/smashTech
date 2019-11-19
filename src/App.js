@@ -1,9 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Clock from './components/Clock';
 import DegreeAngle from './components/DegreeAngle';
-import Angle from './components/Angle';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -13,24 +11,6 @@ export default class App extends React.Component {
       time: new Date(),
     };
   }
-
-  static propTypes = {
-    indicatorSeconds: PropTypes.string,
-    indicatorMinutes: PropTypes.string,
-    indicatorHours: PropTypes.string,
-
-    divStyleSeconds: PropTypes.object,
-    divStyleMinutes: PropTypes.object,
-    divStyleHours: PropTypes.object,
-
-    localTime: PropTypes.string.isRequired,
-    minuteHand: PropTypes.string.isRequired,
-    hourHand: PropTypes.string.isRequired,
-    firstCondition: PropTypes.string.isRequired,
-    secondCondition: PropTypes.string.isRequired,
-    hourTime: PropTypes.string.isRequired,
-    minuteTime: PropTypes.string.isRequired,
-  };
 
   indicatorSeconds() {
     return 'indicator seconds ' + (this.state.time.getSeconds() === 0 ? '' : 'transition-effect');
@@ -67,15 +47,6 @@ export default class App extends React.Component {
   }
 
   render() {
-    // const {
-    //   minuteHand,
-    //   hourHand,
-    //   firstCondition,
-    //   secondCondition,
-    //   hourTime,
-    //   minuteTime,
-    // } = this.props;
-
     const hoursDegrees = this.state.time.getHours() * 30 + this.state.time.getMinutes() / 2;
     const minutesDegrees = this.state.time.getMinutes() * 6 + this.state.time.getSeconds() / 10;
     const secondsDegrees = this.state.time.getSeconds() * 6;
@@ -107,6 +78,7 @@ export default class App extends React.Component {
               divStyleMinutes={divStyleMinutes}
               divStyleHours={divStyleHours}
             />
+            
             <DegreeAngle 
               localTime={this.state.time.toLocaleTimeString()}
               minuteHand={minuteHand}
@@ -114,7 +86,6 @@ export default class App extends React.Component {
               minuteTime={this.minuteTime}
               hourTime={this.hourTime}
             />
-            <Angle />
           </div>
         </div>
       </div>
